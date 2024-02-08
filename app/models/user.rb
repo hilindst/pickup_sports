@@ -8,8 +8,9 @@ class User < ApplicationRecord
 
   #associations
   has_many :posts
+  has_one :profile
 
-  
+
   private
   def validate_username
       unless username =~ /\A[a-zA-Z0-9_]+\Z/
